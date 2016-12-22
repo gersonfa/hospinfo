@@ -1,0 +1,20 @@
+<div class="container-fluid">
+    <div class="col-md-2">
+        <div class="panel panel-default">
+            <!-- Default panel contents -->
+            <div class="panel-body">
+                <img class="img-responsive" src="img/rec.jpg" alt="" style="margin-left: auto; margin-right:auto;">
+            </div>
+
+            <!-- List group -->
+            <ul class="list-group">
+                <a href="#/recepcionist/patientslist"><li class="list-group-item">Pacientes</li></a>
+                <a href="#/recepcionist"><li class="list-group-item">Calendario</li></a>
+                <a href="#/recepcionist/adddate"><li class="list-group-item">Agregar cita</li></a>
+            </ul>
+        </div>
+    </div>
+    <div class="col-md-10">
+        <div ui-calendar ng-model="eventSources"></div>
+    </div>
+</div>

@@ -1,0 +1,50 @@
+<div class="container-fluid">
+    <div class="col-md-2">
+        <div class="panel panel-default">
+            <!-- Default panel contents -->
+            <div class="panel-body">
+                <img class="img-responsive" src="img/nurse.png" alt="" style="margin-left: auto; margin-right:auto;">
+            </div>
+
+            <!-- List group -->
+            <ul class="list-group">
+            </ul>
+        </div>
+    </div>
+    <div class="col-md-10">
+        <div class="form-group">
+                <label for="" class="col-md-4 control-label">Aréa:</label>
+                <div class="col-md-4">
+                    <select ng-model="area" class="form-control" name="area">
+                        <option value="Todos" selected="selected">Todos</option>
+                        <option value="Cardiología">Cardiología</option>
+                        <option value="Gastroenterología">Gastroenterología</option>
+                        <option value="Endocrinología">Endocrinología</option>
+                        <option value="Neurología">Neurología</option> 
+                        <option value="Pediatría">Pediatría</option>
+                        <option value="Reumatología">Reumatología</option>
+                        <option value="Oncología">Oncología</option>
+                        <option value="Urología">Urología</option>  
+                    </select>
+                </div>
+                <button class="btn btn-default" ng-click="byArea(area)">Buscar</button>
+            </div>
+        <table class="table table-striped custab">
+            <thead>
+                <tr>
+                    <th>Nombre paciente</th>
+                    <th>Aréa</th>
+                    <th class="text-center">Opciones</th>
+                </tr>
+            </thead>
+                    <tr ng-repeat="patient in patients">
+                        <td>{{patient.name}}</td>
+                        <td>{{patient.area}}</td>
+                        <td class="text-center">
+                            <a href="#/recepcionist/{{patient.name}}" class="btn btn-info btn-xs"><span class="glyphicon glyphicon-eye-open"></span></a>
+                        </td>
+                    </tr>
+            </table>
+    </div>
+</div>
+

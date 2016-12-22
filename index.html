@@ -1,0 +1,71 @@
+<html lang="es" ng-app="hospital">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <title>HospInfo</title>
+  
+  <link href="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.css" rel="stylesheet">
+  <link rel="stylesheet" href="http://bootswatch.com/flatly/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.0.1/fullcalendar.min.css">
+  
+</head>
+
+<body>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#/">HospInfo</a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#/">Inicio</a></li>
+            </ul>
+            <ul ng-controller="LoginController" class="nav navbar-nav navbar-right">
+                <li><a href="#/login"></a></li>
+                <li><a>{{username}}</a></li>
+            </ul>
+            </div>
+        </div>
+    </nav>
+
+  <div ng-view></div>
+  
+  
+ 
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+  <script src="http://momentjs.com/downloads/moment.min.js"></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+
+  <script src="node_modules/angular-ui-calendar/src/calendar.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.0.1/fullcalendar.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.0.1/locale/es.js"></script>
+
+  <script src="js/lib/ui-bootstrap.min.js"></script>
+  <script src="js/lib/locale.js"></script>
+  <script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.js"></script>
+  <script src="https://code.angularjs.org/1.5.8/angular-route.min.js"></script>
+  <script src="js/services/services.js"></script>
+  <script src="js/directives/directives.js"></script>
+  <script src="js/patients.controllers.js"></script>
+  <script src="js/recepcionist.controllers.js"></script>
+  <script src="js/nurse.controllers.js"></script>
+  <script src="js/medician.controllers.js"></script>
+  <script src="js/home.controllers.js"></script>
+  <script src="js/app.js">    
+    
+  </script>
+  
+</body>
+</html>

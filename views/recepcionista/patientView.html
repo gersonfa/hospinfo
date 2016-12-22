@@ -1,0 +1,61 @@
+<div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 toppad" >
+   
+   
+          <div class="panel panel-info">
+            <div class="panel-heading">
+              <h3 class="panel-title">{{patient.name}}</h3>
+            </div>
+            <div class="panel-body">
+              <div class="row">
+                 <div class=" col-md-9 col-lg-9 "> 
+                  <table class="table table-user-information">
+                    <tbody>
+                      <tr>
+                        <td>Genero:</td>
+                        <td>{{patient.genre}}</td>
+                      </tr>
+                      <tr>
+                        <td>Fecha de nacimiento:</td>
+                        <td>{{patient.birth | date : 'dd/MM/yyyy'}}</td>
+                      </tr>
+                      <tr>
+                        <td>Dirección</td>
+                        <td>{{patient.address}}</td>
+                      </tr>
+                      <tr>
+                        <tr>
+                        <td>Grupo Sanguíneo</td>
+                        <td>{{patient.blood}}</td>
+                      </tr>
+                        <tr>
+                        <td>Aréa</td>
+                        <td>{{patient.area}}</td>
+                      </tr>
+                      <tr>
+                        <td>Información médica</td>
+                        <td>{{patient.information}}</td>
+                      </tr>  
+                      </tr>
+                     
+                    </tbody>
+                  </table>
+                  
+                 
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+ <div class="container">
+    <div ng-repeat="diagnostic in patient.diagnostics" class="panel panel-info">
+      <div class="panel-heading">{{diagnostic.title}} - {{diagnostic.date | date : 'dd/MM/yyyy'}}</div>
+      <div class="panel-body">
+        {{diagnostic.info}}
+      </div>
+    </div>
+ </div>

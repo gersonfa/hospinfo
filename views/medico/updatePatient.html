@@ -1,0 +1,99 @@
+<div class="container">
+    <div class="col-md-10 col-md-offset-1">
+        
+        <form class="form-horizontal">
+            <fieldset>
+
+            <!-- Form Name -->
+            <legend>Agregar nuevo paciente</legend>
+
+            <!-- Text input-->
+            <div class="form-group">
+                <label class="col-md-4 control-label">Nombre paciente:</label>  
+                <div class="col-md-6">
+                <input disabled ng-model="patient.name" type="text" placeholder="Nombre paciente:" class="form-control input-md disabled" required="">
+                    
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="" class="col-md-4 control-label">Género:</label>
+                <div class="col-md-6">
+                    <select disabled ng-model="patient.genre" class="form-control" name="genero">
+                        <option value="masculino">Masculino</option>
+                        <option value="femenino">Femenino</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="">
+                <label class="col-md-4 control-label" for="">Fecha de nacimiento:</label>
+                <div class="col-md-6">
+                    <div style="display:inline-block; min-height:290px;">
+                        <div uib-datepicker ng-model="patient.birth" class="" datepicker-options="options"></div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Textarea -->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="Address">Dirección:</label>
+                <div class="col-md-4">                     
+                    <textarea disabled ng-model="patient.address" class="form-control" id="Address" name="Direccion" placeholder="Dirección"></textarea>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="" class="col-md-4 control-label">Grupo sanguíneo:</label>
+                <div class="col-md-6">
+                    <select ng-model="patient.blood" class="form-control" name="sangre">
+                        <option value="O-">O-</option>
+                        <option value="O+">O+</option>
+                        <option value="B-">B-</option>
+                        <option value="B+">B+</option> 
+                        <option value="A-">A-</option>
+                        <option value="A+">A+</option>
+                        <option value="AB-">AB-</option>
+                        <option value="AB+">AB+</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="" class="col-md-4 control-label">Aréa:</label>
+                <div class="col-md-6">
+                    <select ng-model="patient.area" class="form-control" name="area">
+                        <option value="Cardiología">Cardiología</option>
+                        <option value="Gastroenterología">Gastroenterología</option>
+                        <option value="Endocrinología">Endocrinología</option>
+                        <option value="Neurología">Neurología</option> 
+                        <option value="Pediatría">Pediatría</option>
+                        <option value="Reumatología">Reumatología</option>
+                        <option value="Oncología">Oncología</option>
+                        <option value="Urología">Urología</option>  
+                    </select>
+                </div>
+            </div>
+
+
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="infmed">Información médica:</label>
+                <div class="col-md-4">                     
+                    <textarea ng-model="patient.information" class="form-control" name="infmed" placeholder="Información médica"></textarea>
+                </div>
+            </div>
+
+            <!-- Button -->
+            <div class="form-group">
+            <label class="col-md-4 control-label" for=""></label>
+            <div class="col-md-4">
+                <a href="#/medician/patientslist"><button class="btn btn-alert">Cancelar</button></a>
+                <button id="" name="" class="btn btn-success" ng-click="updatePatient(patient)">Actualizar paciente</button>
+            </div>
+            </div>
+
+            </fieldset>
+        </form>
+    </div>
+</div>

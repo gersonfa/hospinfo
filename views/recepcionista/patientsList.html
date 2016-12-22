@@ -1,0 +1,37 @@
+<div class="container-fluid">
+    <div class="col-md-2">
+        <div class="panel panel-default">
+            <!-- Default panel contents -->
+            <div class="panel-body">
+                <img class="img-responsive" src="img/rec.jpg" alt="" style="margin-left: auto; margin-right:auto;">
+            </div>
+
+            <!-- List group -->
+            <ul class="list-group">
+                <a href="#/recepcionist/patientslist"><li class="list-group-item">Pacientes</li></a>
+                <a href="#/recepcionist"><li class="list-group-item">Calendario</li></a>
+            </ul>
+        </div>
+    </div>
+    <div class="row col-md-10 custyle">
+        <table class="table table-striped custab">
+            <thead>
+                <tr>
+                    <th>Nombre paciente</th>
+                    <th>Aréa</th>
+                    <th class="text-center">Opciones</th>
+                </tr>
+            </thead>
+                    <tr ng-repeat="patient in patients">
+                        <td>{{patient.name}}</td>
+                        <td>{{patient.area}}</td>
+                        <td class="text-center">
+                            <a href="#/recepcionist/{{patient.name}}" class="btn btn-info btn-xs"><span class="glyphicon glyphicon-eye-open"></span></a>
+                            <a class='btn btn-success btn-xs' href="#/recepcionist/edit/{{patient.name}}"><span class="glyphicon glyphicon-edit"></span></a>                                 
+                            <a href="#" class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-trash"></span></a> 
+                        
+                        </td>
+                    </tr>
+            </table>
+    </div>
+</div>
